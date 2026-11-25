@@ -650,3 +650,13 @@ span.btn--ghost:hover { background: transparent; color: var(--ink); }
 .row__shots--side img { aspect-ratio: 16 / 10; }
 
 .about { padding-top: clamp(40px, 5vw, 80px); padding-bottom: clamp(40px, 5vw, 80px); }
+
+.about { padding-top: clamp(16px, 2vw, 32px); padding-bottom: clamp(28px, 3vw, 48px); }
+.about__collage { aspect-ratio: 16 / 11; }
+.home-band .tb--band { margin: 0; }
+.games { padding-top: clamp(28px, 3.5vw, 56px); }
+.hero + .about, .about { padding-top: clamp(16px, 2vw, 32px); }
+.home-band { padding: 0; }
+.home-band .tb--band { width: 100vw; max-width: none; margin-left: calc(50% - 50vw); border-radius: 0; border-left: 0; border-right: 0; }
+.games .intro { margin-bottom: clamp(16px, 2vw, 28px); }
+.games { padding-bottom: 0; }

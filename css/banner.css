@@ -133,3 +133,28 @@
   .tb *, .tb *::after { animation: none !important; }
   .tb__slides img:first-child { opacity: 1; }
 }
+
+/* small band (blog pages and the home page divider) */
+.tb--band { width: 100%; max-width: 1100px; margin: 18px auto 0; min-height: 0; height: clamp(170px, 24vw, 320px); border: 1px solid var(--line); border-radius: 6px; }
+.tb--band .tb__shade { background: radial-gradient(ellipse at center, rgba(18,19,19,.15), rgba(18,19,19,.6) 80%); }
+.tb--band .tb-tape { top: 50%; transform: translateY(-50%) rotate(-4deg); }
+.tb--band .tb-br--tl, .tb--band .tb-br--tr { top: 34px; } .tb--band .tb-br--bl, .tb--band .tb-br--br { bottom: 34px; }
+.tb--band .tb-clap, .tb--band .tb-stamp, .tb--band .tb-crest, .tb--band .tb-claw, .tb--band .tb-iso-eye { display: none; }
+.tb--band.tb--film .tb__corners { inset: 36px 16px; }
+@media (max-width: 560px) { .tb--band .tb__c--tr, .tb--band .tb__c--br { display: none; } }
+.tb--band { max-width: none; }
+.tb-tape--back { top: 50%; z-index: 0; transform: translateY(-50%) rotate(5deg); background: transparent; color: transparent; -webkit-text-stroke: 1px rgba(239,234,224,.4); }
+.tb-tape--back div { animation-direction: reverse; animation-duration: 52s; }
+.tb--band .tb-tape--back { transform: translateY(-50%) rotate(5deg); }
+
+/* back tape: white letters, no strip */
+.tb-tape.tb-tape--back { color: rgba(243,238,228,.92); -webkit-text-stroke: 0; background: transparent; }
+
+/* corner labels as small chips with an accent edge */
+.tb__c { padding: 6px 10px 6px 9px; background: rgba(11, 11, 11, .74); color: var(--ink); border: 1px solid rgba(243, 238, 228, .12);
+  border-left: 2px solid var(--tb-accent); border-radius: 3px; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  font-size: 11px; letter-spacing: .1em; line-height: 1.2; text-shadow: none; white-space: nowrap; }
+.tb__c--tr, .tb__c--br { border-left: 1px solid rgba(243, 238, 228, .12); border-right: 2px solid var(--tb-accent); }
+.tb__c [data-clock], .tb__c [data-counter] { color: var(--tb-accent); font-variant-numeric: tabular-nums; }
+.tb--bodycam .tb__c--tl, .tb--studio .tb__c--tl { animation: none; }
+.tb__c--tl::first-letter { color: var(--tb-accent); }

@@ -139,9 +139,6 @@
 .post-banner__tape--back div { animation-direction: reverse; animation-duration: 52s; }
 .post-banner__tape i { font-style: normal; opacity: .55; }
 @keyframes post-tape { to { transform: translateX(-50%); } }
-.post-banner__eye { position: absolute; left: 50%; top: 50%; z-index: 2; width: clamp(84px, 11vw, 150px); aspect-ratio: 64 / 40; translate: -50% -50%;
-  padding: 14px 18px; box-sizing: content-box; background: var(--void); border: 1px solid var(--line); border-radius: 4px; color: var(--ink);
-  box-shadow: 0 0 0 6px color-mix(in srgb, var(--void) 70%, transparent); }
 .post-banner__eye svg { width: 100%; height: 100%; display: block; }
 .post-banner__c { position: absolute; z-index: 2; color: #cfc9bd; }
 .post-banner__c b { color: var(--post-accent, var(--signal)); animation: post-rec 1.2s steps(2) infinite; font-weight: 400; }
@@ -165,28 +162,15 @@
 .blog-head .crumbs { justify-self: center; }
 .blog-head .page-lede, .blog-head .post-sub { margin-inline: auto; max-width: 40ch; }
 .blog-head .post-title { font-size: clamp(40px, 6.4vw, 104px); text-wrap: balance; }
-.tb--band { width: 100%; max-width: 1100px; margin: 18px auto 0; min-height: 0; height: clamp(170px, 24vw, 320px); border: 1px solid var(--line); border-radius: 6px; }
-.tb--band .tb__shade { background: radial-gradient(ellipse at center, rgba(18,19,19,.15), rgba(18,19,19,.6) 80%); }
-.tb--band .tb-tape { top: 50%; transform: translateY(-50%) rotate(-4deg); }
-.tb--band .tb__eye { position: absolute; left: 50%; top: 50%; z-index: 4; width: clamp(84px, 11vw, 150px); aspect-ratio: 11 / 7; translate: -50% -50%;
-  padding: 14px 18px; box-sizing: content-box; background: var(--void); border: 1px solid var(--line); border-radius: 4px; color: var(--ink);
-  box-shadow: 0 0 0 6px color-mix(in srgb, var(--void) 70%, transparent); }
-.tb--band .tb__eye svg { width: 100%; height: 100%; display: block; }
-.tb--band .tb__eye .iris rect { fill: var(--tb-accent); }
-.tb--band .tb-br--tl, .tb--band .tb-br--tr { top: 34px; } .tb--band .tb-br--bl, .tb--band .tb-br--br { bottom: 34px; }
-.tb--band .tb-clap, .tb--band .tb-stamp, .tb--band .tb-crest, .tb--band .tb-claw, .tb--band .tb-iso-eye { display: none; }
-.tb--band.tb--film .tb__corners { inset: 36px 16px; }
 .post-body { margin-inline: auto; }
 .blog-intro { margin-inline: auto; }
 .blog-articles { max-width: 1100px; margin-inline: auto; width: 100%; }
 .blog-grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
-@media (max-width: 560px) { .tb--band .tb__c--tr, .tb--band .tb__c--br { display: none; } }
 
 /* header on the left, band across the full content width, text centred below */
 .blog-head { justify-items: start; text-align: start; max-width: none; margin: 0; }
 .blog-head .crumbs { justify-self: start; }
 .blog-head .page-lede, .blog-head .post-sub { margin-inline: 0; }
-.tb--band { max-width: none; }
 .blog-articles { max-width: none; }
 .post { justify-items: stretch; }
 .post-body, .blog-intro { width: min(100%, 720px); margin-inline: auto; justify-self: center; }
@@ -199,6 +183,3 @@
 .post-foot, .post-nav { width: min(700px, 100%); justify-self: center; }
 
 /* the band's second tape: outlined letters running the other way */
-.tb-tape--back { top: 50%; z-index: 0; transform: translateY(-50%) rotate(5deg); background: transparent; color: transparent; -webkit-text-stroke: 1px rgba(239,234,224,.4); }
-.tb-tape--back div { animation-direction: reverse; animation-duration: 52s; }
-.tb--band .tb-tape--back { transform: translateY(-50%) rotate(5deg); }
