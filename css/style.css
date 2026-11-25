@@ -661,3 +661,12 @@ span.btn--ghost:hover { background: transparent; color: var(--ink); }
 .games .intro { margin-bottom: clamp(16px, 2vw, 28px); }
 .games { padding-bottom: 0; }
 .code { padding-bottom: clamp(16px, 2vw, 28px); }
+
+/* compact footer and code section */
+.code { padding-top: clamp(24px, 3vw, 48px); }
+.footer { padding-top: clamp(28px, 3.5vw, 52px); }
+.footer__grid { gap: 24px; padding-bottom: clamp(20px, 2.5vw, 36px); align-items: start; }
+.footer__nav { padding-top: 12px; padding-bottom: 12px; }
+.footer__bar { padding-top: 12px; padding-bottom: max(14px, env(safe-area-inset-bottom, 0px)); }
+.footer__mark-text { padding: .6vw 0 0; }
+.footer__logo { margin-top: 18px; }
