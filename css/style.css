@@ -660,3 +660,4 @@ span.btn--ghost:hover { background: transparent; color: var(--ink); }
 .home-band .tb--band { width: 100vw; max-width: none; margin-left: calc(50% - 50vw); border-radius: 0; border-left: 0; border-right: 0; }
 .games .intro { margin-bottom: clamp(16px, 2vw, 28px); }
 .games { padding-bottom: 0; }
+.code { padding-bottom: clamp(16px, 2vw, 28px); }
