@@ -306,7 +306,7 @@
     const trailer = row.querySelector('.row__trailer');
     row.classList.toggle('is-open', open);
     head.setAttribute('aria-expanded', String(open));
-    row.querySelector('.row__toggle').textContent = open ? '( – )' : '( + )';
+    row.querySelector('.row__toggle').textContent = open ? '( − )' : '( + )';
     const isVideo = trailer && trailer.tagName === 'VIDEO';
     if (open && isVideo && !trailer.getAttribute('src')) trailer.src = trailer.dataset.src;
     if (!open && isVideo) trailer.pause();

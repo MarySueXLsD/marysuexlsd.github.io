@@ -32,13 +32,14 @@
   <link rel="stylesheet" href="/css/lang.css?v=3">
   <link rel="alternate" type="application/rss+xml" title="Loosy Tale Studio blog" href="/blog/feed.xml">
   
-  <script>(function(){var L=["en", "pl", "ru", "es", "ar", "de"],p=location.pathname,m=p.match(/^\/(pl|ru|es|ar|de)(\/|$)/),c=m?m[1]:"en",s=null;try{s=localStorage.getItem("lt-lang")}catch(e){}document.addEventListener("click",function(e){var t=e.target.closest&&e.target.closest("[data-lang]");if(t){try{localStorage.setItem("lt-lang",t.getAttribute("data-lang"))}catch(x){}}},true);if(!s&&c==="en"){var a=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||""]).slice();try{a.push(Intl.DateTimeFormat().resolvedOptions().locale)}catch(e){}for(var i=0;i<a.length;i++){var k=String(a[i]||"").toLowerCase().slice(0,2);if(L.indexOf(k)>=0){s=k;break}}}if(s&&s!==c&&L.indexOf(s)>=0){var b=m?p.slice(m[1].length+1):p;location.replace((s==="en"?"":"/"+s)+(b||"/")+location.search+location.hash)}})();</script>
+  <script>(function(){var L=["en", "pl", "ru", "es", "ar", "de", "uk"],p=location.pathname,m=p.match(/^\/(pl|ru|es|ar|de|uk)(\/|$)/),c=m?m[1]:"en",s=null;try{s=localStorage.getItem("lt-lang")}catch(e){}document.addEventListener("click",function(e){var t=e.target.closest&&e.target.closest("[data-lang]");if(t){try{localStorage.setItem("lt-lang",t.getAttribute("data-lang"))}catch(x){}}},true);if(!s&&c==="en"){var a=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||""]).slice();try{a.push(Intl.DateTimeFormat().resolvedOptions().locale)}catch(e){}for(var i=0;i<a.length;i++){var k=String(a[i]||"").toLowerCase().slice(0,2);if(L.indexOf(k)>=0){s=k;break}}}if(s&&s!==c&&L.indexOf(s)>=0){var b=m?p.slice(m[1].length+1):p;location.replace((s==="en"?"":"/"+s)+(b||"/")+location.search+location.hash)}})();</script>
   <link rel="alternate" hreflang="en" href="https://marysuexlsd.github.io/games/">
   <link rel="alternate" hreflang="pl" href="https://marysuexlsd.github.io/pl/games/">
   <link rel="alternate" hreflang="ru" href="https://marysuexlsd.github.io/ru/games/">
   <link rel="alternate" hreflang="es" href="https://marysuexlsd.github.io/es/games/">
   <link rel="alternate" hreflang="ar" href="https://marysuexlsd.github.io/ar/games/">
   <link rel="alternate" hreflang="de" href="https://marysuexlsd.github.io/de/games/">
+  <link rel="alternate" hreflang="uk" href="https://marysuexlsd.github.io/uk/games/">
   <link rel="alternate" hreflang="x-default" href="https://marysuexlsd.github.io/games/">
   <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://marysuexlsd.github.io/#studio", "name": "Loosy Tale Studio", "url": "https://marysuexlsd.github.io/", "logo": "https://marysuexlsd.github.io/media/brand/loosy-tale-logo.png", "founder": {"@type": "Person", "name": "Viktar Syanau", "alternateName": "MarySue", "jobTitle": "Game designer and programmer", "url": "https://marysuexlsd.github.io/about/", "sameAs": ["https://marysue.itch.io/", "https://github.com/MarySueXLsD"]}, "sameAs": ["https://marysue.itch.io/", "https://github.com/MarySueXLsD"]}, {"@type": "CollectionPage", "name": "Игры Loosy Tale Studio", "url": "https://marysuexlsd.github.io/ru/games/", "mainEntity": {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": 1, "url": "https://marysuexlsd.github.io/ru/games/badge-and-blood/", "name": "Badge & Blood"}, {"@type": "ListItem", "position": 2, "url": "https://marysuexlsd.github.io/ru/games/five-picture-deal/", "name": "Five-Picture Deal"}, {"@type": "ListItem", "position": 3, "url": "https://marysuexlsd.github.io/ru/games/rewind/", "name": "Rewind"}, {"@type": "ListItem", "position": 4, "url": "https://marysuexlsd.github.io/ru/games/hyperdash/", "name": "HYPERDASH"}, {"@type": "ListItem", "position": 5, "url": "https://marysuexlsd.github.io/ru/games/am-i-approved/", "name": "Am I Approved?"}, {"@type": "ListItem", "position": 6, "url": "https://marysuexlsd.github.io/ru/games/weight-of-the-crown/", "name": "The Weight of the Crown"}, {"@type": "ListItem", "position": 7, "url": "https://marysuexlsd.github.io/ru/games/elders-saga/", "name": "The Elder’s Saga"}, {"@type": "ListItem", "position": 8, "url": "https://marysuexlsd.github.io/ru/games/kill-em-all/", "name": "Kill’em All.io"}]}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://marysuexlsd.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Игры"}]}]}</script>
 </head>
@@ -46,12 +47,12 @@
   <a class="skip" href="#main">Перейти к содержимому</a>
   <div class="grain" aria-hidden="true"></div>
   <header class="page-head wrap">
-    <a href="/ru/" class="brand page-brand" aria-label="Loosy Tale Studio — главная">
+    <a href="/ru/" class="brand page-brand" aria-label="Главная страница Loosy Tale Studio">
       <img src="/media/brand/loosy-tale-logo.png" alt="" class="brand__logo">
       <span class="brand__name label">LOOSY TALE<br>STUDIO</span>
     </a>
     <nav class="page-nav label" aria-label="Сайт">
-      <details class="lang"><summary class="label" aria-label="Language: Русский"><span aria-hidden="true">◐</span> RU</summary><ul class="lang__menu"><li><a href="/ru/games/" hreflang="en" lang="en" data-lang="en"><b>EN</b> English</a></li><li><a href="/pl/games/" hreflang="pl" lang="pl" data-lang="pl"><b>PL</b> Polski</a></li><li><a href="/ru/games/" hreflang="ru" lang="ru" data-lang="ru" aria-current="true"><b>RU</b> Русский</a></li><li><a href="/es/games/" hreflang="es" lang="es" data-lang="es"><b>ES</b> Español</a></li><li><a href="/ar/games/" hreflang="ar" lang="ar" data-lang="ar"><b>AR</b> العربية</a></li><li><a href="/de/games/" hreflang="de" lang="de" data-lang="de"><b>DE</b> Deutsch</a></li></ul></details>
+      <details class="lang"><summary class="label" aria-label="Language: Русский"><span aria-hidden="true">◐</span> RU</summary><ul class="lang__menu"><li><a href="/ru/games/" hreflang="en" lang="en" data-lang="en"><b>EN</b> English</a></li><li><a href="/pl/games/" hreflang="pl" lang="pl" data-lang="pl"><b>PL</b> Polski</a></li><li><a href="/ru/games/" hreflang="ru" lang="ru" data-lang="ru" aria-current="true"><b>RU</b> Русский</a></li><li><a href="/es/games/" hreflang="es" lang="es" data-lang="es"><b>ES</b> Español</a></li><li><a href="/ar/games/" hreflang="ar" lang="ar" data-lang="ar"><b>AR</b> العربية</a></li><li><a href="/de/games/" hreflang="de" lang="de" data-lang="de"><b>DE</b> Deutsch</a></li><li><a href="/uk/games/" hreflang="uk" lang="uk" data-lang="uk"><b>UA</b> Українська</a></li></ul></details>
       <a href="/ru/games/" aria-current="page">Игры</a><a href="/ru/tools/">Инструменты</a><a href="/ru/blog/">Блог</a><a href="/ru/about/">О студии</a><a href="/ru/#contact" class="page-nav__cta">Контакты</a>
     </nav>
   </header>
@@ -64,7 +65,7 @@
         <img src="/media/games/bodycam/rooftop.webp" alt="Badge &amp; Blood" loading="lazy">
         <span class="label">Бодикам-FPS · Транспорт · Unreal Engine 5 · В разработке</span>
         <h2>Badge &amp; Blood</h2>
-        <p>Ни прицела. Ни HUD. Только камера на груди и всё, что забредёт в кадр.</p>
+        <p>Шутер от первого лица глазами нагрудной бодикамеры, без перекрестия прицела и без HUD.</p>
       </a><a class="index-card" href="/ru/games/five-picture-deal/">
         <img src="/media/games/five-picture-deal/screens/01.webp" alt="Five-Picture Deal" loading="lazy">
         <span class="label">Трюковой шутер · От первого лица · Unreal Engine 5.8 · Вышла</span>
@@ -74,7 +75,7 @@
         <img src="/media/games/rewind/screens/01.webp" alt="Rewind" loading="lazy">
         <span class="label">Ретро-хоррор · Исследование · Unreal Engine 5.8 · Вышла</span>
         <h2>Rewind</h2>
-        <p>Junction 4 не выходит на связь. Вы — инспектор, которого спустили вниз искать бригаду.</p>
+        <p>Junction 4 не выходит на связь. Вас, инспектора, спустили вниз искать бригаду.</p>
       </a><a class="index-card" href="/ru/games/hyperdash/">
         <img src="/media/games/hyperdash/screens/01.webp" alt="HYPERDASH" loading="lazy">
         <span class="label">Микроигры · Пиксель-арт · Браузер · Вышла</span>
@@ -84,12 +85,12 @@
         <img src="/media/games/am-i-approved/screens/01.webp" alt="Am I Approved?" loading="lazy">
         <span class="label">Симулятор клерка · Документы · Браузер · Прототип</span>
         <h2>Am I Approved?</h2>
-        <p>Республика Loria, 1967 год. Вы — сотрудник №447-B. Руководство полностью вам доверяет. А ещё руководство ушло пораньше.</p>
+        <p>Республика Loria, 1967 год. Вы сотрудник №447-B. Руководство полностью вам доверяет. А ещё руководство ушло пораньше.</p>
       </a><a class="index-card" href="/ru/games/weight-of-the-crown/">
         <img src="/media/games/weight-of-the-crown/screens/01.webp" alt="The Weight of the Crown" loading="lazy">
         <span class="label">Выбор · Управление королевством · Daslang · В разработке</span>
         <h2>The Weight of the Crown</h2>
-        <p>King Edwin мёртв. Вы его убили. Теперь удержите трон — одно невозможное решение за другим.</p>
+        <p>King Edwin мёртв. Вы его убили. Теперь удержите трон: одно невозможное решение за другим.</p>
       </a><a class="index-card" href="/ru/games/elders-saga/">
         <img src="/media/games/elders-saga/screens/01.webp" alt="The Elder’s Saga" loading="lazy">
         <span class="label">Пошаговая тактика · Изометрия · Rust · В разработке</span>

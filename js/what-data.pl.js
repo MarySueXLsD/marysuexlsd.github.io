@@ -5,7 +5,7 @@ window.WHAT = [
   "group": "GRY",
   "title": "Projektowanie gier",
   "what": "Decydujemy, co robi gracz, ile go to kosztuje i czego się przez to uczy. Przybijanie pieczątki na kredycie w Am I Approved?, wybór jednej odpowiedzi dziennie w The Weight of the Crown, trzy akrobacje w jednym ujęciu w Five-Picture Deal.",
-  "why": "Zasada to najszybszy sposób, by opowiedzieć historię. Dowiadujesz się, kim jest urzędnik nr 447-B, z tego, na co pozwala mu biurko – na długo, zanim ktokolwiek to wyjaśni.",
+  "why": "Zasady opowiadają historię. W Am I Approved? dowiadujesz się, kim jest urzędnik #447-B, z tego, na co pozwala mu biurko, zanim ktokolwiek to wyjaśni.",
   "media": "/media/games/am-i-approved/gameplay.mp4",
   "links": [
    [
@@ -27,7 +27,7 @@ window.WHAT = [
   "group": "GRY",
   "title": "Projektowanie mechanik",
   "what": "Zasady, które na siebie napierają. Każda odpowiedź w The Weight of the Crown przesuwa naraz dziewięć filarów władzy. W HYPERDASH każda naprawa przyspiesza statek, a muzyka za nim nadąża. W Five-Picture Deal każda akrobacja jest zarazem twoją zbroją.",
-  "why": "Mechaniki piszą sceny, których nikt nie zaplanował. Zaraza, pusty skarbiec i nieopłacona armia to historia, którą tworzy gracz – i nigdy nie potoczy się tak samo dwa razy.",
+  "why": "Gdy zasady wpływają na siebie nawzajem, gracze trafiają na sytuacje, których nigdy nie napisaliśmy ręcznie. Zaraza, pusty skarbiec i nieopłacona armia mogą uderzyć w tym samym tygodniu, a żadne dwa panowania nie wyglądają tak samo.",
   "media": "/media/games/weight-of-the-crown/gameplay.mp4",
   "links": [
    [
@@ -49,7 +49,7 @@ window.WHAT = [
   "group": "GRY",
   "title": "Narracja i dialogi",
   "what": "Postacie, kwestie i głos wokół zasad: klienci, których historie się nie kleją, petenci przed tronem, dyspozytor w radiu na milczącym węźle, regulamin pracownika pisany z kamienną twarzą.",
-  "why": "Małe światy potrzebują dziwnych ludzi. Dobra kwestia sprawia, że zasada wydaje się zamieszkana, a dziwna każe ci dwa razy przyjrzeć się kolejnemu klientowi.",
+  "why": "Postacie nadają zasadom twarz. Am I Approved? uczy sprawdzania dokumentów za pomocą klienta, którego historia się nie klei.",
   "media": "/media/games/weight-of-the-crown/loop.mp4",
   "links": [
    [
@@ -75,7 +75,7 @@ window.WHAT = [
   "group": "GRY",
   "title": "Projektowanie poziomów",
   "what": "Przestrzenie budowane wokół jednego pytania. Plac kontenerowy w Badge & Blood ma 49 na 30 metrów, trzy przesunięte korytarze i żadnej linii wzroku dłuższej niż jakieś 17 metrów; drugi plac piętrzy trzy poziomy z drogami na górę. W Rewind wrogiem jest ciemność, więc to światło wyznacza trasę.",
-  "why": "Przestrzeń to zasada, przez którą przechodzisz. Krótkie linie wzroku sprawiają, że w pojedynku liczą się rogi i wyczucie czasu, a nie tylko celność.",
+  "why": "Układ mapy zmienia przebieg walki. Przy krótkich liniach widzenia pojedynek rozstrzyga się na rogach, w równym stopniu wyczuciem czasu, co celnością.",
   "media": "/media/games/bodycam/yard-golden.webp",
   "links": [
    [
@@ -97,7 +97,7 @@ window.WHAT = [
   "group": "GRY",
   "title": "Prototypy jamowe",
   "what": "Pełne gry robione pod presją czasu: Five-Picture Deal na 2026 Epic AI MegaJam, Rewind na Retro Horror Jam 2026, HYPERDASH na SlapJam #2, Am I Approved? na The $20K Coolmath Game Jam 2026 i The Weight of the Crown na EdenSpark Game Jam #2.",
-  "why": "Termin decyduje o tym, co ważne. Jam wymusza skończoną grę, a te dobre rosną dalej, gdy jam już się skończy.",
+  "why": "Termin wymusza decyzje. Jam kończy się gotową grą, a te, które się sprawdzają, dostają potem więcej czasu.",
   "media": "/media/games/hyperdash/loop.mp4",
   "links": [
    [
@@ -119,7 +119,7 @@ window.WHAT = [
   "group": "GRY",
   "title": "Zwiastuny i strony na itch",
   "what": "Sami montujemy zwiastuny i budujemy strony sklepowe: pisemny treatment, oś czasu i zmiksowaną ścieżkę dźwiękową ze sprawdzoną głośnością do zwiastuna Rewind oraz animowane okładki, banery i tła dla każdej strony na itch.io.",
-  "why": "Nikt nie zagra w grę, którą przewinął. Pierwsze dziesięć sekund zwiastuna i okładkowy GIF muszą pokazać to, co naprawdę daje frajdę.",
+  "why": "Większość ludzi decyduje w pierwszych sekundach zwiastuna albo na podstawie GIF-a na okładce, więc to one muszą pokazać tę część, w którą gra się najlepiej.",
   "media": "/media/games/rewind/loop.mp4",
   "links": [
    [
@@ -141,7 +141,7 @@ window.WHAT = [
   "group": "KOD",
   "title": "Unreal Engine 5",
   "what": "Nasze prace 3D. Five-Picture Deal i Rewind powstały w Unreal Engine 5.8, a Badge & Blood to strzelanka z kamery nasobnej z własnym pluginem do kamery na piersi, obiektywu, wspinaczki, tłuczenia szkła i pojedynków jeden na jednego.",
-  "why": "Gdy gra żyje w kamerze (akrobacja, bodycam, latarka w tunelu), chcemy prawdziwego światła, prawdziwych obiektywów i prawdziwej fizyki.",
+  "why": "Te gry stoją na kamerze: kaskaderski wyczyn, kamera nasobna, latarka w tunelu. Unreal daje nam do tego oświetlenie, obiektywy i fizykę.",
   "media": "/media/games/five-picture-deal/loop.mp4",
   "links": [
    [
@@ -162,8 +162,8 @@ window.WHAT = [
   "id": "haxe",
   "group": "KOD",
   "title": "Haxe / OpenFL",
-  "what": "Nasze przeglądarkowe gry 2D. HYPERDASH i Am I Approved? są napisane w Haxe na OpenFL i działają prosto ze strony na itch.io – na mysz, dotyk lub klawiaturę.",
-  "why": "W gry przeglądarkowe się gra. Jedno kliknięcie, zero instalacji, a i tak działa na telefonie.",
+  "what": "Nasze przeglądarkowe gry 2D. HYPERDASH i Am I Approved? są napisane w Haxe na OpenFL i działają prosto ze strony na itch.io, na mysz, dotyk lub klawiaturę.",
+  "why": "Gry przeglądarkowej nie trzeba instalować, więc więcej osób ją wypróbuje, a do tego działa na telefonach.",
   "media": "/media/games/am-i-approved/cover.mp4",
   "links": [
    [
@@ -185,7 +185,7 @@ window.WHAT = [
   "group": "KOD",
   "title": "Rust",
   "what": "Natywne gry i narzędzia, które muszą być szybkie i solidne: The Elder’s Saga, hardkorowa turowa gra taktyczna w izometrii, oraz SensePad, automat perkusyjny na DualSense.",
-  "why": "Gry taktyczne to zasady od góry do dołu. Rust pilnuje, by setki z nich grały uczciwie, a gra wychodzi jako jeden plik .exe z folderem zasobów obok.",
+  "why": "Gra taktyczna to setki współdziałających zasad. Rust wyłapuje wiele błędów, zanim gra w ogóle się uruchomi, a gotowa gra to jeden plik .exe z folderem zasobów.",
   "media": "/media/games/elders-saga/loop.mp4",
   "links": [
    [
@@ -203,7 +203,7 @@ window.WHAT = [
   "group": "KOD",
   "title": "Daslang / EdenSpark",
   "what": "Język skryptowy silnika EdenSpark. Napisane są w nim The Weight of the Crown i Kill’em All.io.",
-  "why": "Na nim stoją jamy EdenSpark, a szybki język skryptowy pozwala grze jamowej wyrosnąć na prawdziwą.",
+  "why": "Korzystają z niego jamy EdenSpark, a jest na tyle szybki, że po jamie można dalej rozwijać grę.",
   "media": "/media/games/kill-em-all/loop.mp4",
   "links": [
    [
@@ -225,7 +225,7 @@ window.WHAT = [
   "group": "KOD",
   "title": "C# / MonoGame",
   "what": "MaryS Game Engine jest napisany w C# na MonoGame: własna pętla gry, okna edytora i system modułów na bazie renderowania i obsługi wejścia z MonoGame.",
-  "why": "MonoGame to framework, nie silnik, więc silnik na nim może być nasz – skrojony pod gry turowe od edytora w górę.",
+  "why": "MonoGame obsługuje renderowanie i sterowanie, ale nie ma edytora, więc sami zbudowaliśmy edytor i system modułów z myślą o grach turowych.",
   "media": "/media/tools/marys-engine.mp4",
   "links": [
    [
@@ -239,7 +239,7 @@ window.WHAT = [
   "group": "KOD",
   "title": "TypeScript i Lua",
   "what": "TypeScript do aplikacji desktopowych i botów: Maris Local AI i Brackets. Lua do skryptów w cudzej grze: mod kooperacji do Silent Hill 2.",
-  "why": "Piszemy w języku, którym mówi gospodarz: TypeScript tam, gdzie sami budujemy całą aplikację, Lua tam, gdzie gra nas wpuszcza.",
+  "why": "Używamy tego, czego oczekuje platforma: TypeScript w naszych aplikacjach, Lua tam, gdzie gra obsługuje mody w Lua.",
   "media": "/media/tools/maris-banner.mp4",
   "links": [
    [
@@ -261,7 +261,7 @@ window.WHAT = [
   "group": "NARZĘDZIA",
   "title": "Silniki gier i edytory",
   "what": "MaryS Game Engine: modułowy silnik 2D do gier turowych, z edytorem w stylu pulpitu, narzędziami typu przeciągnij i upuść oraz asystentem AI. Każde narzędzie edytora to moduł, który możesz dodać lub usunąć, a wszystko, co stworzy moduł, zostaje we własnym folderze gry.",
-  "why": "Gry turowe mają ten sam szkielet. Silnik zbudowany wokół nich sprawia, że kolejna gra taktyczna startuje w połowie gotowa, a zbudować ją mogą też ci, którzy nie programują.",
+  "why": "Gry turowe mają wiele wspólnej struktury. Z silnikiem zbudowanym pod nie nowa gra zaczyna z tą częścią gotową, a zrobić ją mogą też osoby, które nie programują.",
   "media": "/media/tools/marys-engine.mp4",
   "links": [
    [
@@ -275,7 +275,7 @@ window.WHAT = [
   "group": "NARZĘDZIA",
   "title": "Rozszerzenia VS Code",
   "what": "Travelling Kingdom: towarzysz podróży w pasku bocznym VS Code i Cursor. Wędruj traktem, odwiedzaj miejsca i werbuj kompanów, kiedy pracujesz; twoje postępy zapisują się między sesjami.",
-  "why": "Większość dni spędzamy w edytorze. Małe królestwo wędrujące obok kodu zamienia długą sesję w podróż.",
+  "why": "Większość dnia spędzamy w edytorze, a mała gra na pasku bocznym sprawia, że długie sesje mniej się dłużą.",
   "media": "/media/tools/travelling-kingdom.mp4",
   "links": [
    [
@@ -289,7 +289,7 @@ window.WHAT = [
   "group": "NARZĘDZIA",
   "title": "Mody do gier",
   "what": "Eksperymentalny mod kooperacji dla dwóch graczy wraz z launcherem do Silent Hill 2 (2024). Nieoficjalny projekt fanowski.",
-  "why": "Niektóre gry zasługują na drugiego gracza. Modowanie to też nasz sposób, by poznać cudze silniki od środka.",
+  "why": "Silent Hill 2 nie ma trybu kooperacji. Modowanie go to też dobry sposób, żeby poznać, jak działa inny silnik.",
   "media": "/media/tools/sh2-coop.mp4",
   "links": [
    [
@@ -303,7 +303,7 @@ window.WHAT = [
   "group": "NARZĘDZIA",
   "title": "Narzędzia do kontrolerów i dźwięku",
   "what": "SensePad zamienia kontroler DualSense w automat perkusyjny na Windows: pady, looper i efekty DJ-skie.",
-  "why": "Kontroler z naciskiem, czujnikiem ruchu i haptyką w twoich rękach to instrument, który tylko czeka, by nim zostać.",
+  "why": "DualSense ma triggery czułe na nacisk, czujniki ruchu i haptykę, więc dobrze nadaje się do gry na perkusji.",
   "media": "/media/tools/sensepad.mp4",
   "links": [
    [
@@ -317,7 +317,7 @@ window.WHAT = [
   "group": "NARZĘDZIA",
   "title": "Lokalni asystenci AI",
   "what": "Maris Local AI: prywatny asystent działający w całości na twoim PC. Czat, agent do kodowania, pomoc z komputerem, która pyta, zanim cokolwiek zmieni, ucząca się pamięć, przeglądanie sieci oraz lokalne generowanie obrazów i wideo.",
-  "why": "Twoje pliki zostają na twoim komputerze. Asystenta, który pyta, zanim czegokolwiek dotknie, możesz spokojnie zostawić włączonego.",
+  "why": "Twoje pliki zostają na twoim komputerze, a asystent pyta, zanim cokolwiek na nim zmieni.",
   "media": "/media/tools/maris-loop.mp4",
   "links": [
    [
@@ -331,7 +331,7 @@ window.WHAT = [
   "group": "NARZĘDZIA",
   "title": "Boty na Twitch",
   "what": "Brackets: bot do czatu na Twitch, który odpowiada widzom w twoim stylu, gdy grasz, z launcherem pokazującym każdą odpowiedź i powód, dla którego padła.",
-  "why": "Czat pędzi szybciej, niż gracz zdąży odpowiadać. Bot, który brzmi jak ty, podtrzymuje rozmowę na streamie, a pokazywanie jego powodów trzyma go w ryzach.",
+  "why": "Czat pędzi szybciej, niż streamer jest w stanie odpowiadać w trakcie grania. Bot odpowiada w twoim stylu, a launcher pokazuje, dlaczego powiedział każdą rzecz.",
   "media": "/media/tools/brackets.mp4",
   "links": [
    [
