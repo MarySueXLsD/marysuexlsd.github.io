@@ -1,0 +1,135 @@
+/* Themed banner (.tb): full-width opener for game, tool and blog pages.
+   --tb-accent comes from site_data.THEMES; the motif class (.tb--bodycam, .tb--film ...) picks the overlay. */
+.tb { position: relative; width: 100vw; margin-left: calc(50% - 50vw); margin-top: calc(-1 * clamp(30px, 5vw, 70px));
+  min-height: clamp(480px, 84svh, 880px); display: grid; align-items: end; overflow: hidden; isolation: isolate;
+  background: var(--deep); border-bottom: 1px solid var(--line); }
+.tb--short { min-height: clamp(400px, 62svh, 640px); }
+.tb__media { position: absolute; inset: 0; z-index: 0; }
+.tb__video, .tb__slides img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.tb__slides img { opacity: 0; animation: tb-slide calc(var(--n) * 6s) linear infinite; animation-delay: calc(var(--i) * 6s - 1.5s); }
+.tb__slides.is-single img { opacity: 1; animation: tb-kb 24s ease-in-out infinite alternate; }
+@keyframes tb-slide { 0% { opacity: 0; transform: scale(1.1); } 4% { opacity: 1; } 17% { opacity: 1; } 21% { opacity: 0; transform: scale(1); } 100% { opacity: 0; } }
+@keyframes tb-kb { from { transform: scale(1.02); } to { transform: scale(1.12) translate(-1.5%, -1%); } }
+.tb__shade { position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(180deg, rgba(18,19,19,.6) 0%, rgba(18,19,19,.08) 28%, rgba(18,19,19,.3) 58%, var(--void) 100%),
+              linear-gradient(90deg, rgba(18,19,19,.82) 0%, rgba(18,19,19,.35) 45%, rgba(18,19,19,0) 75%); }
+.tb__motif { position: absolute; inset: 0; z-index: 2; pointer-events: none; overflow: hidden; }
+.tb__motif > * { position: absolute; display: block; }
+.tb__corners { position: absolute; inset: clamp(14px, 2vw, 26px); z-index: 3; pointer-events: none; }
+.tb__c { position: absolute; color: var(--tb-accent); font-size: 12px; letter-spacing: .08em; text-shadow: 0 1px 3px rgba(0,0,0,.9); }
+.tb__c--tl { top: 0; left: 0; } .tb__c--tr { top: 0; right: 0; text-align: right; }
+.tb__c--bl { bottom: 0; left: 0; } .tb__c--br { bottom: 0; right: 0; text-align: right; }
+.tb__body { position: relative; z-index: 4; padding-top: clamp(120px, 18vh, 200px); padding-bottom: clamp(64px, 9vh, 104px); display: grid; gap: 16px; justify-items: start; }
+.tb .crumbs { color: #d7d1c5; }
+.tb .page-tag { color: var(--tb-accent); }
+.tb .page-title { text-shadow: 0 6px 40px rgba(0,0,0,.5); }
+.tb .page-lede { color: #f1ebdf; text-shadow: 0 2px 18px rgba(0,0,0,.6); }
+.tb .page-btns { margin-top: 6px; }
+.tb .btn--ghost { background: rgba(11,11,11,.55); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.tb-play span { color: var(--tb-accent); margin-right: 4px; }
+
+/* bodycam: lens vignette, frame brackets, blinking REC */
+.tb--bodycam .tb__media { transform: scale(1.05); filter: contrast(1.08) saturate(1.06); }
+.tb-lens { inset: 0; background: radial-gradient(ellipse 72% 88% at 50% 48%, transparent 52%, rgba(0,0,0,.7) 100%); }
+.tb-br { width: clamp(26px, 3.6vw, 54px); aspect-ratio: 1; border: 2px solid rgba(243,238,228,.7); }
+.tb-br--tl { top: clamp(44px, 6vw, 80px); left: clamp(20px, 3vw, 44px); border-right: 0; border-bottom: 0; }
+.tb-br--tr { top: clamp(44px, 6vw, 80px); right: clamp(20px, 3vw, 44px); border-left: 0; border-bottom: 0; }
+.tb-br--bl { bottom: clamp(44px, 6vw, 80px); left: clamp(20px, 3vw, 44px); border-right: 0; border-top: 0; }
+.tb-br--br { bottom: clamp(44px, 6vw, 80px); right: clamp(20px, 3vw, 44px); border-left: 0; border-top: 0; }
+.tb--bodycam .tb__c--tl, .tb--studio .tb__c--tl { animation: tb-blink 1.2s steps(2) infinite; }
+@keyframes tb-blink { 50% { opacity: .25; } }
+
+/* film: sprocket strips that roll, a clapper that snaps */
+.tb-sprk { left: 0; right: 0; height: 28px; background: linear-gradient(90deg, transparent 0 14px, rgba(243,238,228,.82) 14px 32px) 0 50% / 46px 11px repeat-x, #070707;
+  animation: tb-roll 1.6s linear infinite; }
+.tb-sprk--top { top: 0; } .tb-sprk--bot { bottom: 0; animation-direction: reverse; }
+@keyframes tb-roll { to { background-position: 46px 50%; } }
+.tb--film .tb__corners { inset: 42px clamp(14px, 2vw, 26px); }
+.tb-clap { right: 6%; top: 22%; width: clamp(150px, 20vw, 300px); height: clamp(20px, 2.2vw, 30px); border-radius: 3px;
+  background: repeating-linear-gradient(-45deg, #f3eee4 0 18px, #0b0b0b 18px 36px); box-shadow: 0 10px 30px rgba(0,0,0,.6);
+  transform-origin: 0 100%; animation: tb-clap 6s cubic-bezier(.7,0,.3,1) infinite; }
+@keyframes tb-clap { 0%, 70% { transform: rotate(-22deg); } 76%, 100% { transform: rotate(-4deg); } }
+
+/* vhs: washed picture, tracking bands, scanlines */
+.tb--vhs .tb__media { filter: saturate(.65) contrast(1.18) brightness(.92); }
+.tb-track { left: 0; right: 0; top: -12%; height: 7%; background: linear-gradient(transparent, rgba(255,255,255,.16), transparent); mix-blend-mode: screen; animation: tb-track 7s linear infinite; }
+.tb-track--late { height: 2.5%; animation-duration: 11s; animation-delay: -4s; }
+@keyframes tb-track { to { top: 112%; } }
+.tb-vhs-glow { inset: 0; background: repeating-linear-gradient(0deg, rgba(0,0,0,.28) 0 1px, transparent 1px 3px); animation: tb-jit .18s steps(2) infinite; }
+@keyframes tb-jit { 50% { transform: translateX(1px); } }
+
+/* pixel: crisp upscaled picture and two star fields flying past */
+.tb--pixel .tb__video { image-rendering: pixelated; }
+.tb-stars { inset: -50% 0 0; background: radial-gradient(rgba(255,255,255,.9) 1px, transparent 1.6px) 0 0 / 71px 71px; animation: tb-fly 9s linear infinite; opacity: .55; }
+.tb-stars--near { background: radial-gradient(var(--tb-accent) 1.5px, transparent 2.2px) 13px 29px / 113px 113px; animation-duration: 4s; opacity: .7; }
+@keyframes tb-fly { to { transform: translateY(50%); } }
+.tb-speed { inset: 0; background: linear-gradient(90deg, transparent, rgba(255,106,43,.1) 65%, transparent); }
+
+/* terminal: green CRT and a stamp */
+.tb--terminal .tb__media { filter: saturate(.8) contrast(1.05); }
+.tb-crt { inset: 0; background: repeating-linear-gradient(0deg, rgba(95,210,122,.09) 0 2px, transparent 2px 4px), radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,.6)); }
+.tb-stamp { right: 7%; top: 24%; padding: .1em .35em; font-family: var(--display); font-weight: 800; font-size: clamp(30px, 5.6vw, 92px); line-height: 1; letter-spacing: .02em;
+  color: var(--tb-accent); border: .09em double var(--tb-accent); border-radius: .12em; transform: rotate(-12deg); opacity: .85;
+  animation: tb-stamp .5s cubic-bezier(.2,1.6,.4,1); }
+@keyframes tb-stamp { from { transform: rotate(-12deg) scale(1.5); } }
+
+/* royal: gold frame and crest */
+.tb--royal .tb__media { filter: sepia(.22) contrast(1.05); }
+.tb-frame { inset: 14px; border: 1px solid color-mix(in srgb, var(--tb-accent) 60%, transparent); outline: 1px solid color-mix(in srgb, var(--tb-accent) 28%, transparent); outline-offset: 6px; }
+.tb-crest { right: 6%; top: 16%; font-size: clamp(90px, 14vw, 230px); line-height: 1; color: color-mix(in srgb, var(--tb-accent) 34%, transparent); text-shadow: 0 0 40px color-mix(in srgb, var(--tb-accent) 30%, transparent); }
+.tb--royal .tb__corners { inset: 34px 38px; }
+
+/* iso: isometric grid and an eye in the dark */
+.tb-iso { inset: 0; background: repeating-linear-gradient(30deg, color-mix(in srgb, var(--tb-accent) 22%, transparent) 0 1px, transparent 1px 46px),
+  repeating-linear-gradient(-30deg, color-mix(in srgb, var(--tb-accent) 22%, transparent) 0 1px, transparent 1px 46px);
+  -webkit-mask-image: linear-gradient(to left, #000 10%, transparent 75%); mask-image: linear-gradient(to left, #000 10%, transparent 75%); }
+.tb-iso-eye { right: 8%; top: 24%; width: clamp(90px, 10vw, 160px); aspect-ratio: 11 / 7; color: var(--tb-accent); filter: drop-shadow(0 0 18px var(--tb-accent)); }
+.tb-iso-eye svg { width: 100%; height: 100%; display: block; }
+
+/* horde: claw slashes and rising embers */
+.tb-claw { right: 7%; top: 12%; width: clamp(140px, 18vw, 270px); height: clamp(180px, 24vw, 350px);
+  background: repeating-linear-gradient(-64deg, transparent 0 34px, var(--tb-accent) 34px 41px, transparent 41px 74px);
+  -webkit-mask-image: radial-gradient(ellipse 50% 50%, #000 35%, transparent 72%); mask-image: radial-gradient(ellipse 50% 50%, #000 35%, transparent 72%);
+  filter: drop-shadow(0 0 14px var(--tb-accent)); opacity: .85; }
+.tb-embers { inset: 0 0 -60%; background: radial-gradient(rgba(255,130,70,.85) 1px, transparent 2px) 0 0 / 97px 131px; animation: tb-rise 10s linear infinite; opacity: .6; }
+@keyframes tb-rise { to { transform: translateY(-38%); } }
+
+/* code: dim picture, ruled lines, a blinking caret */
+.tb--code .tb__media { filter: brightness(.75) saturate(.9); }
+.tb-code { inset: 0; background: repeating-linear-gradient(0deg, color-mix(in srgb, var(--tb-accent) 9%, transparent) 0 1px, transparent 1px 30px); }
+.tb--code .page-tag::after { content: "_"; margin-left: 4px; animation: tb-blink 1s steps(2) infinite; }
+
+/* studio (blog): dotted field and a scrolling tape */
+.tb--studio { background: radial-gradient(ellipse 40% 60% at 70% 40%, color-mix(in srgb, var(--tb-accent) 24%, transparent), transparent 70%), var(--deep); }
+.tb-dots { inset: 0; background: radial-gradient(circle, rgba(239,234,224,.14) 1px, transparent 1.4px) 0 0 / 14px 14px; }
+.tb-tape { left: -5%; right: -5%; top: 30%; padding: .12em 0; transform: rotate(-4deg); background: var(--tb-accent); color: var(--void); white-space: nowrap; overflow: hidden;
+  font-weight: 800; font-size: clamp(22px, 3.4vw, 46px); letter-spacing: -.02em; line-height: 1; }
+.tb--short .tb-tape { top: 15%; }
+.tb-tape div { display: inline-flex; gap: .45em; padding-right: .45em; animation: tb-tape 38s linear infinite; }
+.tb-tape i { font-style: normal; opacity: .55; }
+@keyframes tb-tape { to { transform: translateX(-50%); } }
+
+/* mosaic (about): a tilted wall of screens from every game, drifting */
+.tb__mosaic { position: absolute; inset: -30% -20%; display: grid; grid-auto-flow: column; transform: rotate(-8deg); animation: tb-drift 80s linear infinite; }
+.tb__mosaic > div { display: grid; grid-template-columns: repeat(8, clamp(180px, 16vw, 300px)); gap: 10px; padding-right: 10px; }
+.tb__mosaic img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 4px; filter: grayscale(.35) brightness(.7); }
+@keyframes tb-drift { to { transform: rotate(-8deg) translateX(-50%); } }
+.tb--mosaic .tb__shade { background: linear-gradient(180deg, rgba(18,19,19,.7) 0%, rgba(18,19,19,.35) 40%, var(--void) 100%),
+  linear-gradient(90deg, rgba(18,19,19,.9) 0%, rgba(18,19,19,.4) 55%, rgba(18,19,19,.2) 100%); }
+
+/* trailer modal */
+.tb-dialog { width: min(92vw, 1200px); max-width: none; padding: 0; border: 1px solid var(--line); border-radius: 6px; background: #000; color: var(--ink); overflow: visible; }
+.tb-dialog::backdrop { background: rgba(0,0,0,.84); backdrop-filter: blur(4px); }
+.tb-dialog video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 6px; }
+.tb-dialog__x { position: absolute; top: -46px; right: 0; width: 38px; height: 38px; border-radius: 50%; border: 0; background: var(--ink); color: var(--void); font-size: 16px; cursor: pointer; }
+
+@media (max-width: 700px) {
+  .tb { min-height: 80svh; }
+  .tb__c--tr, .tb__c--br { display: none; }
+  .tb-clap, .tb-stamp, .tb-crest, .tb-claw, .tb-iso-eye { top: 12%; }
+  .tb__shade { background: linear-gradient(180deg, rgba(18,19,19,.55) 0%, rgba(18,19,19,.15) 30%, rgba(18,19,19,.72) 62%, var(--void) 100%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tb *, .tb *::after { animation: none !important; }
+  .tb__slides img:first-child { opacity: 1; }
+}

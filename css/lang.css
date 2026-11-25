@@ -1,0 +1,49 @@
+/* Language switcher (header) and right-to-left / Arabic adjustments. */
+.lang { position: relative; display: inline-flex; }
+.lang summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; padding: 9px 12px; border: 1px solid var(--line);
+  border-radius: 4px; background: var(--deep); font-family: var(--mono); font-size: 12px; letter-spacing: .05em; text-transform: uppercase; color: var(--ink);
+  transition: background .2s, color .2s; user-select: none; }
+.lang summary::-webkit-details-marker { display: none; }
+.lang summary span { color: var(--signal); }
+.lang summary:hover, .lang[open] summary { background: var(--ink); color: var(--void); }
+.lang__menu { position: absolute; top: calc(100% + 8px); inset-inline-end: 0; z-index: 60; min-width: 190px; margin: 0; padding: 6px; list-style: none;
+  display: grid; gap: 2px; background: var(--deep); border: 1px solid var(--line); border-radius: 6px; box-shadow: 0 18px 40px rgba(0,0,0,.55); }
+.lang__menu a { display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 4px; font-family: var(--mono); font-size: 13px;
+  letter-spacing: .02em; text-transform: none; color: var(--ink); border: 0; background: none; }
+.lang__menu a b { width: 24px; color: var(--mute); font-weight: 500; }
+.lang__menu a:hover { background: var(--panel); }
+.lang__menu a[aria-current] { background: var(--panel); }
+.lang__menu a[aria-current] b { color: var(--signal); }
+.lang__menu a[lang="ar"] { font-family: "Noto Sans Arabic", var(--mono); }
+.topnav .lang { margin-inline-start: 4px; }
+.topnav .lang summary { padding: 11px 12px; border-color: transparent; background: transparent; }
+.topnav .lang summary:hover, .topnav .lang[open] summary { background: var(--panel); color: var(--ink); }
+
+/* Arabic: its own typeface, no tracking or capitals, a bit more line height */
+:root[lang="ar"] { --display: "Noto Sans Arabic", "Inter Tight", Tahoma, sans-serif; }
+:root[lang="ar"] body, :root[lang="ar"] .label, :root[lang="ar"] .giant, :root[lang="ar"] h1, :root[lang="ar"] h2, :root[lang="ar"] h3,
+:root[lang="ar"] .btn, :root[lang="ar"] .chip, :root[lang="ar"] .page-nav a, :root[lang="ar"] .topnav a {
+  font-family: "Noto Sans Arabic", "Inter Tight", Tahoma, sans-serif; letter-spacing: 0 !important; text-transform: none !important; }
+:root[lang="ar"] .giant, :root[lang="ar"] .page-title, :root[lang="ar"] .post-title { line-height: 1.2; }
+:root[lang="ar"] .label { font-size: 13px; }
+
+/* right to left: mirror the banner shade and list markers */
+[dir="rtl"] .tb__shade { background: linear-gradient(180deg, rgba(18,19,19,.6) 0%, rgba(18,19,19,.08) 28%, rgba(18,19,19,.3) 58%, var(--void) 100%),
+  linear-gradient(270deg, rgba(18,19,19,.82) 0%, rgba(18,19,19,.35) 45%, rgba(18,19,19,0) 75%); }
+[dir="rtl"] .page-list, [dir="rtl"] .b-list { padding-left: 0; padding-right: 22px; }
+[dir="rtl"] .tb-clap, [dir="rtl"] .tb-stamp, [dir="rtl"] .tb-crest, [dir="rtl"] .tb-claw, [dir="rtl"] .tb-iso-eye { right: auto; left: 7%; }
+[dir="rtl"] .tb-iso { -webkit-mask-image: linear-gradient(to right, #000 10%, transparent 75%); mask-image: linear-gradient(to right, #000 10%, transparent 75%); }
+[dir="rtl"] .tb-tape, [dir="rtl"] .tb__mosaic, [dir="rtl"] .marquee, [dir="rtl"] .ticker { direction: ltr; }
+[dir="rtl"] .crumbs, [dir="rtl"] .facts dd { unicode-bidi: plaintext; }
+
+/* nav link rules must not leak into the menu */
+.lang .lang__menu a, .lang .lang__menu a:hover, .lang .lang__menu a:focus-visible { color: var(--ink); border: 0; }
+.lang .lang__menu a:hover { background: var(--panel); }
+.lang .lang__menu a[aria-current] { background: var(--ink); color: var(--void); }
+.lang .lang__menu a[aria-current] b { color: var(--signal); }
+.topnav .lang { margin-inline-start: 0; margin-inline-end: 2px; }
+.page-nav .lang { order: -1; }
+
+/* horizontal reels and scrollers keep running left to right in Arabic */
+[dir="rtl"] .band, [dir="rtl"] .band__track, [dir="rtl"] .cam__gallery, [dir="rtl"] .row__strip, [dir="rtl"] .marquee__track { direction: ltr; }
+html[dir="rtl"] { overflow-x: clip; }
